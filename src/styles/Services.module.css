@@ -1,0 +1,41 @@
+.services {
+    width: calc(100% - 40px);
+    margin: 20px auto; /* Centralizar a seção */
+    padding: 40px 20px;
+    background-color: #ffffff; /* Cor de fundo branco */
+    border-radius: 10px;
+    display: flex; /* Adicionar flexbox para posicionamento da imagem e texto */
+    align-items: center;
+    justify-content: space-between; /* Espaçar os itens igualmente */
+    text-align: left; /* Alinhar o texto à esquerda */
+}
+
+.serviceContent {
+    flex: 1; /* Permitir que o conteúdo ocupe o espaço restante */
+    margin-right: 20px; /* Espaçamento à direita do conteúdo */
+}
+
+.serviceImage {
+    width: 600px; /* Ajustar a largura da imagem */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 10px; /* Borda arredondada na imagem */
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services p, .services ul {
+    font-size: 1rem;
+    color: #666;
+}
+
+.services ul {
+    list-style: none; /* Remover os marcadores da lista */
+    padding: 0;
+}
+
+.services ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}

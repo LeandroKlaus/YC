@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Classy Marisa';
+    src: url('/path-to-your-font/ClassyMarisa.otf') format('opentype'); /* Atualize o caminho conforme necessário */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    width: auto;
+    background-color: #ffffff;
+    padding: 20px; /* Aumentar o padding para maior espaçamento */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none; /* Remover a linha que divide o header da main */
+    font-family: 'Classy Marisa', cursive !important; /* Aplicar a fonte no header */
+}
+
+.header h1 {
+    font-size: 3rem; /* Aumentar o tamanho do texto "Your Color" */
+    margin-left: 20px; /* Adicionar margem à esquerda */
+}

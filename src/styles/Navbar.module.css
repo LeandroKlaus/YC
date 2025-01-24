@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Classy Marisa';
+    src: url('/path-to-your-font/ClassyMarisa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centralizar a navbar */
+    align-items: center;
+    padding: 0 20px; /* Adicionar algum padding nas laterais */
+    font-family: 'Classy Marisa', cursive !important; /* Aplicar a fonte na navbar */
+}
+
+.navbar ul {
+    display: flex; /* Garantir que os itens da lista fiquem lado a lado */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1b1b1b;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1a429;
+}

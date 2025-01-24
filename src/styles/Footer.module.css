@@ -1,0 +1,21 @@
+.footer {
+    padding: 5px 20px; /* Reduzir o padding para diminuir a altura */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem; /* Reduzir o tamanho da fonte, se necessário */
+}
+
+
+
+.contactInfo, .socialLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialLinks a {
+    text-decoration: none;
+    color: #333;
+    margin: 2px 0;
+}
