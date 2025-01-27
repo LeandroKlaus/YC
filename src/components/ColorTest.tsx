@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/colortest.module.css";
+import styles from '../styles/ColorTest.module.css';
 
 const ColorTest: React.FC = () => {
   const [selectedSkinColor, setSelectedSkinColor] = useState("");
