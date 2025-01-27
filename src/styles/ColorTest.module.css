@@ -1,79 +1,94 @@
-.colorTest {
-    width: 80%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    background-color: #fff7f3; /* Fundo suave */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Classy+Marisa:wght@400;700&display=swap');
+
+.container {
+  font-family: 'Classy Marisa', cursive;
+  background-color: #ffffff;
+  color: #2c1b18;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.colorTest h2 {
-    font-size: 2.5rem;
-    color: #d14527; /* Cor atraente para o título */
-    margin-bottom: 30px;
-    font-family: 'Georgia', serif; /* Fonte elegante para o título */
+.header {
+  flex: 1;
+  text-align: left;
 }
 
-.colorTest form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header h1 {
+  font-family: 'Classy Marisa', cursive;
+  font-size: 6rem; /* Aumentar o tamanho da fonte */
+  font-weight: 700;
+  color: #2c1b18;
+  margin-bottom: 10px;
+  white-space: pre-line; /* Permite quebras de linha no título */
 }
 
-.colorTest label {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 10px;
-    text-align: left;
-    width: 100%;
-    max-width: 600px;
+.decorativeLine {
+  width: 100px;
+  height: 4px;
+  background-color: #ffee51;
+  margin: 0 auto 30px 0;
+  border-radius: 2px;
 }
 
-.colorTest select, .colorTest button {
-    width: 100%;
-    max-width: 600px;
-    padding: 15px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.colorTest button {
-    background-color: #d14527;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-weight: bold;
+.section {
+  background: #151515;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.colorTest button:hover {
-    background-color: #a93223;
+.section h2 {
+  font-family: 'Classy Marisa', cursive;
+  font-size: 1.5rem;
+  color: #ffee51;
+  margin-bottom: 15px;
 }
 
-/* Adicionar ícones às opções */
-.colorTest select {
-    background-image: url('icon.png');
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+.colorOptions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* Estilizar a mensagem de resultado */
-.colorTest p {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: bold;
+.colorCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.colorCircle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+  border: 3px solid #ffee51;
+}
+
+.whatsappButton {
+  margin-top: 20px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-family: 'Classy Marisa', cursive;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsappButton:hover {
+  background-color: #1ebe57;
 }

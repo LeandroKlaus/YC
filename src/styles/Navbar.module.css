@@ -7,14 +7,14 @@
 
 .navbar {
     display: flex;
-    justify-content: center; /* Centralizar a navbar */
+    justify-content: center;
     align-items: center;
-    padding: 0 20px; /* Adicionar algum padding nas laterais */
-    font-family: 'Classy Marisa', cursive !important; /* Aplicar a fonte na navbar */
+    padding: 0 20px;
+    font-family: 'Classy Marisa', cursive !important;
 }
 
 .navbar ul {
-    display: flex; /* Garantir que os itens da lista fiquem lado a lado */
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -34,3 +34,8 @@
 .navbar a:hover {
     color: #d1a429;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+

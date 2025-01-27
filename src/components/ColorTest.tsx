@@ -1,71 +1,77 @@
-import React, { useState } from 'react';
-import styles from '../styles/ColorTest.module.css';
+import React, { useState } from "react";
+import styles from "../styles/colortest.module.css";
 
 const ColorTest: React.FC = () => {
-    const [result, setResult] = useState<string | null>(null);
+  const [selectedSkinColor, setSelectedSkinColor] = useState("");
+  const [selectedHairColor, setSelectedHairColor] = useState("");
+  const [selectedFavoriteColor, setSelectedFavoriteColor] = useState("");
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // Lógica para calcular o resultado com base nas respostas
-        setResult('Baseado nas suas respostas, sua coloração pessoal é Primavera.');
-    };
+  const handleSkinColorClick = (color: string) => setSelectedSkinColor(color);
+  const handleHairColorClick = (color: string) => setSelectedHairColor(color);
+  const handleFavoriteColorClick = (color: string) =>
+    setSelectedFavoriteColor(color);
 
-    return (
-        <section className={styles.colorTest}>
-            <h2>Teste de Coloração Pessoal</h2>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="skinTone">Qual é o tom da sua pele?</label>
-                <select id="skinTone">
-                    <option value="pardo">Pardo</option>
-                    <option value="negro">Negro</option>
-                    <option value="branco">Branco</option>
-                </select>
+  const handleWhatsAppClick = () => {
+    const message = `Cor da Pele: ${selectedSkinColor}\nCor do Cabelo: ${selectedHairColor}\nCor Favorita: ${selectedFavoriteColor}`;
+    window.open(`https://wa.me/+559299999-9999?text=${encodeURIComponent(message)}`, "_blank");
+  };
 
-                <label htmlFor="skinUndertone">Qual é o subtom da sua pele?</label>
-                <select id="skinUndertone">
-                    <option value="frio">Frio</option>
-                    <option value="neutro">Neutro</option>
-                    <option value="quente">Quente</option>
-                </select>
-
-                <label htmlFor="hairColor">Qual é a cor do seu cabelo?</label>
-                <select id="hairColor">
-                    <option value="loiro">Loiro</option>
-                    <option value="castanho">Castanho</option>
-                    <option value="preto">Preto</option>
-                    <option value="ruivo">Ruivo</option>
-                    <option value="grisalho">Grisalho</option>
-                </select>
-
-                <label htmlFor="eyeColor">Qual é a cor dos seus olhos?</label>
-                <select id="eyeColor">
-                    <option value="azul">Azul</option>
-                    <option value="verde">Verde</option>
-                    <option value="castanho">Castanho</option>
-                    <option value="avela">Avelã</option>
-                </select>
-
-                <label htmlFor="favoriteColor">Qual é a cor que você mais gosta de usar?</label>
-                <select id="favoriteColor">
-                    <option value="vermelho">Vermelho</option>
-                    <option value="azul">Azul</option>
-                    <option value="verde">Verde</option>
-                    <option value="amarelo">Amarelo</option>
-                    <option value="rosa">Rosa</option>
-                    <option value="roxo">Roxo</option>
-                    <option value="laranja">Laranja</option>
-                    <option value="marrom">Marrom</option>
-                    <option value="cinza">Cinza</option>
-                    <option value="preto">Preto</option>
-                    <option value="branco">Branco</option>
-                    <option value="bege">Bege</option>
-                </select>
-
-                <button type="submit">Descubra sua coloração</button>
-            </form>
-            {result && <p>{result}</p>}
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1>Teste de<br></br>Coloração<br></br>Pessoal</h1>
+        <div className={styles.decorativeLine}></div>
+      </header>
+      <main className={styles.main}>
+        <section className={styles.section}>
+          <h2>Cor da Pele</h2>
+          <div className={styles.colorOptions}>
+            {["#c58c85", "#ecbcb4", "#d1a68c"].map((color) => (
+              <div
+                key={color}
+                className={`${styles.colorCircle} ${
+                  selectedSkinColor === color ? styles.selected : ""
+                }`}
+                style={{ backgroundColor: color }}
+                onClick={() => handleSkinColorClick(color)}
+              ></div>
+            ))}
+          </div>
         </section>
-    );
+        <section className={styles.section}>
+          <h2>Cor do Cabelo</h2>
+          <div className={styles.colorOptions}>
+            {["#2c1b18", "#5a3e36", "#b35a27"].map((color) => (
+              <div
+                key={color}
+                className={`${styles.colorCircle} ${
+                  selectedHairColor === color ? styles.selected : ""
+                }`}
+                style={{ backgroundColor: color }}
+                onClick={() => handleHairColorClick(color)}
+              ></div>
+            ))}
+          </div>
+        </section>
+        <section className={styles.section}>
+          <h2>Cor Favorita</h2>
+          <div className={styles.colorOptions}>
+            {["#d96332", "#f0c987", "#ebbab9"].map((color) => (
+              <div
+                key={color}
+                className={`${styles.colorCircle} ${
+                  selectedFavoriteColor === color ? styles.selected : ""
+                }`}
+                style={{ backgroundColor: color }}
+                onClick={() => handleFavoriteColorClick(color)}
+              ></div>
+            ))}
+          </div>
+        </section>
+        <button className={styles.whatsappButton} onClick={handleWhatsAppClick}>Enviar para WhatsApp</button>
+      </main>
+    </div>
+  );
 };
 
 export default ColorTest;

@@ -61,3 +61,26 @@
     border-radius: 20px;
     object-fit: contain;
 }
+
+.ctaButton {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #d1a429; /* Letras amarelo queimado */
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #d1a429; /* Bordas amarelo queimado */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Classy Marisa', cursive !important;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+    background-color: #d1a429; /* Fundo amarelo queimado */
+    color: #ffffff; /* Letras brancas */
+}
+
+.ctaButton:active {
+    transform: scale(0.98);
+}

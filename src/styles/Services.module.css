@@ -1,41 +1,83 @@
 .services {
     width: calc(100% - 40px);
-    margin: 20px auto; /* Centralizar a seção */
+    margin: 20px auto;
     padding: 40px 20px;
-    background-color: #ffffff; /* Cor de fundo branco */
+    background-color: #ffffff;
     border-radius: 10px;
-    display: flex; /* Adicionar flexbox para posicionamento da imagem e texto */
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Espaçar os itens igualmente */
-    text-align: left; /* Alinhar o texto à esquerda */
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Classy Marisa', cursive !important;
 }
 
 .serviceContent {
-    flex: 1; /* Permitir que o conteúdo ocupe o espaço restante */
-    margin-right: 20px; /* Espaçamento à direita do conteúdo */
+    flex: 1;
+    margin-right: 20px;
 }
 
 .serviceImage {
-    width: 600px; /* Ajustar a largura da imagem */
-    height: auto; /* Manter a proporção da imagem */
-    border-radius: 10px; /* Borda arredondada na imagem */
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
 }
 
 .services h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-.services p, .services ul {
-    font-size: 1rem;
+.services p {
+    font-size: 1.2rem;
     color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .services ul {
-    list-style: none; /* Remover os marcadores da lista */
+    list-style: none;
     padding: 0;
+    font-size: 1.2rem;
+    color: #666;
 }
 
 .services ul li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.services ul li::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #d1a429;
+    font-size: 1.5rem;
+}
+
+.ctaButton {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #d1a429;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Classy Marisa', cursive !important;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+    background-color: #ffffff;
+    color: #d1a429;
+    border: 2px solid #d1a429;
+}
+
+.ctaButton:active {
+    transform: scale(0.98);
 }
