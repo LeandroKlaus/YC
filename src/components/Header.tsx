@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar'; // Certifique-se de importar a navbar
-import styles from '../styles/header.module.css'; // Certifique-se de que o caminho está correto
+import Navbar from './Navbar';
+import styles from '../styles/Header.module.css';
 
 const Header: React.FC = () => {
     return (
