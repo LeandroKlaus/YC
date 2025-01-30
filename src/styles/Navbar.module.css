@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Classy Marisa';
-    src: url('/path-to-your-font/ClassyMarisa.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 .navbar {
     display: flex;
