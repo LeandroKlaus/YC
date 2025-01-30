@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Classy Marisa';
-    src: url('/src/fonts/ClassyMarisa.otf') format('opentype');
+    src: url('./MarisaMedium.woff2') format('woff2'),
+         url('./MarisaMedium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
