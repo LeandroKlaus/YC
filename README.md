@@ -1,4 +1,4 @@
-# LINK PARA VISUALIZAÇÃO DO PROJETO YC: yanacunha.vercel.app
+# LINK PARA VISUALIZAÇÃO DO PROJETO YC: https://yanacunha.vercel.app
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
